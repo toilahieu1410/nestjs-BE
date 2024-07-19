@@ -33,7 +33,7 @@ export class User {
   role: string;
 
   @Prop()
-  refréhToken: string;
+  refreshToken: string;
 
   @Prop({ type: Object })
   createdBy: {
