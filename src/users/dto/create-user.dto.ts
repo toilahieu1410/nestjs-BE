@@ -28,7 +28,7 @@ export class CreateUserDto {
   @IsNotEmpty({ message: 'Password không được để trống' })
   gender: string;
 
-  @IsNotEmpty({ message: 'Password không được để trống' })
+  @IsNotEmpty({ message: 'Address không được để trống' })
   address: string;
 
   @IsNotEmpty({ message: 'Role không được để trống' })
@@ -38,7 +38,7 @@ export class CreateUserDto {
   @IsObject()
   @ValidateNested()
   @Type(() => Company)
-  company: Company;
+  company: Company; // company là 1 biến object
 }
 
 export class RegisterUserDto {
@@ -55,12 +55,13 @@ export class RegisterUserDto {
   @IsNotEmpty({ message: 'Tuổi không được để trống' })
   age: string;
 
-  @IsNotEmpty({ message: 'Password không được để trống' })
+  @IsNotEmpty({ message: 'Gender không được để trống' })
   gender: string;
 
-  @IsNotEmpty({ message: 'Password không được để trống' })
+  @IsNotEmpty({ message: 'Address không được để trống' })
   address: string;
 
   @IsNotEmpty({ message: 'Role không được để trống' })
   role: string;
 }
+
